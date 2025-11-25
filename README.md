@@ -61,7 +61,7 @@ npm run dev
 
 L'application Frontend sera disponible à l'adresse indiquée par Vite (généralement http://localhost:5173).
 
-## 4. Identifiants de Test
+### 4. Identifiants de Test
 
 Utilisez ces identifiants pour tester le flux sécurisé (créés par le DataInitializer au premier lancement du Backend) :
 
