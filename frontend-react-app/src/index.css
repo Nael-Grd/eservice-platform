@@ -1,0 +1,35 @@
+/*
+ATTENTION: Ce sont les directives qui indiquent à PostCSS/Vite d'injecter toutes
+les classes Tailwind. Elles DOIVENT être en haut du fichier.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+/* Laisser ces styles par défaut de Vite interférer avec Tailwind est risqué.
+Pour un projet Tailwind, il est préférable de ne laisser que le minimum
+dans le CSS global et de styliser directement dans les composants React (App.jsx).
+
+Nous conservons uniquement l'importation de la police et la réinitialisation
+de base si vous n'avez pas de CDN pour la police Inter. 
+*/
+
+:root {
+  /* Supprimé les couleurs de fond/texte par défaut pour laisser Tailwind les gérer */
+  line-height: 1.5;
+  font-weight: 400;
+  
+  /* Utiliser Inter, si la police est chargée via CDN ou autre */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif; 
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+Supprimé : body, a, button, h1 et media query. 
+Ces éléments doivent être stylisés par les classes Tailwind (ex: bg-gray-100, text-blue-600, etc.)
+dans App.jsx pour garantir le rendu sophistiqué.
+*/

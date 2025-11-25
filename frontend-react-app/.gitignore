@@ -1,0 +1,44 @@
+# -----------------------------------------------------
+# EXCLUSIONS GLOBALES (Pour le Dépôt Complet)
+# -----------------------------------------------------
+# Fichiers de compilation et logs
+*.log
+*.class
+*.bak
+
+# Fichiers d'environnement
+.env
+
+# MacOS files
+.DS_Store
+
+# -----------------------------------------------------
+# EXCLUSIONS BACKEND (Dossier e-service-platform/)
+# -----------------------------------------------------
+
+### Maven (Java Build)
+/e-service-platform/target/
+# Fichiers de wrapper Maven (inutiles une fois sur Git)
+/e-service-platform/.mvn/wrapper/maven-wrapper.jar
+# Fichiers de configuration IDE
+/e-service-platform/.idea/
+/e-service-platform/*.iml
+/e-service-platform/*.ipr
+/e-service-platform/*.iws
+
+# -----------------------------------------------------
+# EXCLUSIONS FRONTEND (Dossier frontend-react-app/)
+# -----------------------------------------------------
+
+### Node.js/NPM (Dépendances)
+# Le dossier de dépendances (TRÈS LOURD)
+/frontend-react-app/node_modules/
+# Fichiers de cache
+/frontend-react-app/npm-debug.log*
+/frontend-react-app/yarn-debug.log*
+/frontend-react-app/yarn-error.log*
+
+### React/Vite Build
+# Les fichiers de build finaux (à générer, pas à versionner)
+/frontend-react-app/dist/
+/frontend-react-app/.parcel-cache/
