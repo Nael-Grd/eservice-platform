@@ -57,7 +57,7 @@ npm install lucide-react
 
 # b. Lancer le serveur de développement React
 npm run dev
-
+```
 
 L'application Frontend sera disponible à l'adresse indiquée par Vite (généralement http://localhost:5173).
 
@@ -65,8 +65,7 @@ L'application Frontend sera disponible à l'adresse indiquée par Vite (généra
 
 Utilisez ces identifiants pour tester le flux sécurisé (créés par le DataInitializer au premier lancement du Backend) :
 
-Rôle             Username   Password      Actions Autorisées
-
-Administrateur   admin      adminpass     LOGIN, VIEW ADMIN DASHBOARD, APPROVE, REJECT
-
-Utilisateur      user1      userpass      LOGIN, SUBMIT FORM
+| Rôle | Username | Password | Actions Autorisées |
+| :--- | :--- | :--- | :--- |
+| **Administrateur** | admin | adminpass | LOGIN, VIEW ADMIN DASHBOARD, APPROVE, REJECT |
+| **Utilisateur** | user1 | userpass | LOGIN, SUBMIT FORM |
