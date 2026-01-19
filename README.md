@@ -1,19 +1,18 @@
-# E-SERVICE PLATFORM (Microservice Java/React Sécurisé)
+# E-SERVICE PLATFORM (Microservice Java/React)
 
-Ce projet implémente une plateforme complète de gestion de requêtes administratives (e-Services), simulant les défis d'un système critique (e-Gov ou FinTech). L'architecture est Full-Stack découplée (Mono-Repo) avec gestion des rôles et sécurité par jetons.
+Ce projet implémente une plateforme complète de gestion de requêtes administratives. L'architecture est Full-Stack découplée (Mono-Repo) avec gestion des rôles et sécurité par jetons.
 
 [![Tech Stack](https://img.shields.io/badge/Backend-Java%20%7C%20Spring%20Security%20%7C%20JWT-blue)]()
 [![Frontend](https://img.shields.io/badge/Frontend-React%20%7C%20Tailwind%20CSS-blue)]()
 [![Database](https://img.shields.io/badge/Database-PostgreSQL%20(Docker)-blue)]()
-[![Status](https://img.shields.io/badge/Status-Complete%20%2F%20Production%20Ready-green)]()
 
 ---
 
-##  Description du Projet
+##  🇫🇷 Version Française (english bellow)
 
 ### Fonctionnalités Clés
 
-1.  **Authentification JWT (Sécurité) :** Système sécurisé utilisant **Spring Security** et **JSON Web Tokens (JWT)**. L'architecture est sans état (`STATELESS`), essentielle pour la scalabilité Microservice/Cloud.
+1.  **Authentification JWT (Sécurité) :** Système sécurisé utilisant **Spring Security** et **JSON Web Tokens (JWT)**.
 2.  **Gestion des Rôles :** Distingue l'accès entre `ROLE_USER` (création/soumission de requêtes) et `ROLE_ADMIN` (approbation/rejet) via l'annotation `@PreAuthorize`.
 3.  **Cycle de Vie (BPM) :** Gère le flux de la requête : `DRAFT` -> `SUBMITTED` -> `APPROVED` / `REJECTED`.
 
@@ -24,9 +23,9 @@ Ce projet implémente une plateforme complète de gestion de requêtes administr
 
 ### Frontend (React / Vite)
 
-* React.js (Vite), Tailwind CSS (design sophistiqué).
+* React.js (Vite), Tailwind CSS.
 
-##  Comment Lancer l'Application (Environnement de Développement)
+##  Lancement de l'application
 
 Ce projet utilise **Docker Compose** pour l'infrastructure, assurant un démarrage simple et reproductible.
 
@@ -40,22 +39,26 @@ Ce projet utilise **Docker Compose** pour l'infrastructure, assurant un démarra
 
 Exécutez ces commandes depuis le répertoire **racine du Backend** (`e-service-platform/`) :
 
-```bash
 # a. Lancer la base de données PostgreSQL en conteneur Docker
+```bash
 docker compose up -d
-
+```
 # b. Lancer l'application Spring Boot dans votre IDE
-# (Ouvrez le projet et exécutez la classe EServicePlatformApplication)
+```bash
+(Ouvrez le projet et exécutez la classe EServicePlatformApplication)
+```
 
-
-3. Démarrage du Frontend (React)
+### 3. Démarrage du Frontend (React)
 
 Ouvrez un nouveau terminal dans le dossier frontend-react-app/ :
 
 # a. Installer les dépendances (première fois uniquement)
+```bash
 npm install lucide-react
+```
 
 # b. Lancer le serveur de développement React
+```bash
 npm run dev
 ```
 
@@ -69,3 +72,71 @@ Utilisez ces identifiants pour tester le flux sécurisé (créés par le DataIni
 | :--- | :--- | :--- | :--- |
 | **Administrateur** | admin | adminpass | LOGIN, VIEW ADMIN DASHBOARD, APPROVE, REJECT |
 | **Utilisateur** | user1 | userpass | LOGIN, SUBMIT FORM |
+
+
+
+---
+##  🇺🇸 English Version
+
+### Key Features
+
+1.  **JWT Authentication :** Secure system using **Spring Security** and **JSON Web Tokens (JWT)**.
+2.  **Role Management :** Distinguishes access between `ROLE_USER` (create/submit requests) and `ROLE_ADMIN` (approval/rejection) via the `@PreAuthorize` annotation.
+3.  **Cycle de Vie (BPM) :** Gère le flux de la requête : `DRAFT` -> `SUBMITTED` -> `APPROVED` / `REJECTED`.
+
+### Backend (Java / Spring Boot)
+
+* Java 17+, Spring Boot 3, Spring Security, Spring Data JPA, JJWT.
+* PostgreSQL (persistent via Docker Compose).
+
+### Frontend (React / Vite)
+
+* React.js (Vite), Tailwind CSS.
+
+##  Application launch
+
+### 1. Prerequisites
+
+* Docker Desktop (in progress).
+* Node.js & npm (Frontend).
+* JDK 17+ & Maven (Backend).
+
+### 2. Infrastructure Launch (Backend and Database)
+
+Run these commands from the **Backend root** directory (`e-service-platform/`) :
+
+# a. Launch PostgreSQL via Docker
+```bash
+docker compose up -d
+```
+
+# b. Launch the SpringBoot application frome the IDE
+```bash
+# (Open the project andd run the EServicePlatformApplication class)
+```
+
+### 3.  Frontend Launch (React)
+
+Open a new terminal in the frontend-react-app/ repository :
+
+# a. Install dependencies (first time only)
+```bash
+npm install lucide-react
+``` 
+
+# b. Launch React server
+```bash
+npm run dev
+```
+
+The Frontend application will be available at the address provided by Vite. (generally http://localhost:5173).
+
+### 4. Test Logins
+
+Use these credentials to test the secure flow (created by DataInitializer when the Backend is launched for the first time):
+
+| Rôle | Username | Password | Actions Autorisées |
+| :--- | :--- | :--- | :--- |
+| **Administrateur** | admin | adminpass | LOGIN, VIEW ADMIN DASHBOARD, APPROVE, REJECT |
+| **Utilisateur** | user1 | userpass | LOGIN, SUBMIT FORM |
+
