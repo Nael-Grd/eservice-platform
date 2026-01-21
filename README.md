@@ -1,6 +1,6 @@
 # E-SERVICE PLATFORM (Microservice Java/React)
 
-Ce projet implémente une plateforme complète de gestion de requêtes administratives. L'architecture est Full-Stack découplée (Mono-Repo) avec gestion des rôles et sécurité par jetons.
+Ce projet implémente une plateforme complète de gestion de requêtes administratives avec gestion des rôles et sécurité par jetons.
 
 [![Tech Stack](https://img.shields.io/badge/Backend-Java%20%7C%20Spring%20Security%20%7C%20JWT-blue)]()
 [![Frontend](https://img.shields.io/badge/Frontend-React%20%7C%20Tailwind%20CSS-blue)]()
@@ -27,8 +27,6 @@ Ce projet implémente une plateforme complète de gestion de requêtes administr
 
 ##  Lancement de l'application
 
-Ce projet utilise **Docker Compose** pour l'infrastructure, assurant un démarrage simple et reproductible.
-
 ### 1. Prérequis
 
 * Docker Desktop (en cours d'exécution).
@@ -39,12 +37,13 @@ Ce projet utilise **Docker Compose** pour l'infrastructure, assurant un démarra
 
 Exécutez ces commandes depuis le répertoire **racine du Backend** (`e-service-platform/`) :
 
-# a. Lancer la base de données PostgreSQL en conteneur Docker
 ```bash
+# Lancer la base de données PostgreSQL en conteneur Docker
 docker compose up -d
 ```
-# b. Lancer l'application Spring Boot dans votre IDE
+
 ```bash
+# Lancer l'application Spring Boot dans votre IDE
 (Ouvrez le projet et exécutez la classe EServicePlatformApplication)
 ```
 
@@ -52,13 +51,13 @@ docker compose up -d
 
 Ouvrez un nouveau terminal dans le dossier frontend-react-app/ :
 
-# a. Installer les dépendances (première fois uniquement)
 ```bash
+# Installer les dépendances (première fois uniquement)
 npm install lucide-react
 ```
 
-# b. Lancer le serveur de développement React
 ```bash
+# Lancer le serveur de développement React
 npm run dev
 ```
 
@@ -105,27 +104,27 @@ Utilisez ces identifiants pour tester le flux sécurisé (créés par le DataIni
 
 Run these commands from the **Backend root** directory (`e-service-platform/`) :
 
-# a. Launch PostgreSQL via Docker
 ```bash
+# Launch PostgreSQL via Docker
 docker compose up -d
 ```
 
-# b. Launch the SpringBoot application frome the IDE
 ```bash
-# (Open the project andd run the EServicePlatformApplication class)
+# Launch the SpringBoot application frome the IDE
+# (Open the project and run the EServicePlatformApplication class)
 ```
 
 ### 3.  Frontend Launch (React)
 
 Open a new terminal in the frontend-react-app/ repository :
 
-# a. Install dependencies (first time only)
 ```bash
+# Install dependencies (first time only)
 npm install lucide-react
 ``` 
 
-# b. Launch React server
 ```bash
+# Launch React server
 npm run dev
 ```
 
