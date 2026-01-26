@@ -1,4 +1,4 @@
-# E-SERVICE PLATFORM (Microservice Java/React)
+# E-SERVICE PLATFORM 
 
 Ce projet implémente une plateforme complète de gestion de requêtes administratives avec gestion des rôles et sécurité par jetons.
 
@@ -8,7 +8,7 @@ Ce projet implémente une plateforme complète de gestion de requêtes administr
 
 ---
 
-##  🇫🇷 Version Française (english bellow)
+##  🇫🇷 Version Française (english below)
 
 ### Fonctionnalités Clés
 
