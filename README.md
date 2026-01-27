@@ -8,7 +8,7 @@ Ce projet implémente une plateforme complète de gestion de requêtes administr
 
 ---
 
-##  🇫🇷 Version Française (english below)
+##  *FR* Version Française (English below)
 
 ### Fonctionnalités Clés
 
@@ -75,7 +75,7 @@ Utilisez ces identifiants pour tester le flux sécurisé (créés par le DataIni
 
 
 ---
-##  🇺🇸 English Version
+##  *ENG* English Version
 
 ### Key Features
 
